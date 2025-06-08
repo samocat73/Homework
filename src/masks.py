@@ -11,11 +11,9 @@ def get_mask_card_number(card_number: Union[str, int]) -> str:
 
 
 def get_mask_account(account_number: Union[str, int]) -> str:
-    '''Функция, которая принимает номер счета и возвращает его маску в формате **0000'''
+    """Функция, которая принимает номер счета и возвращает его маску в формате **0000"""
     if type(account_number) is str:
         return f"**{account_number[-4:]}"
     else:
         account_number_on_line = str(account_number)
         return f"**{account_number_on_line[-4:]}"
-
-
